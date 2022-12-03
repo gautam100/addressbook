@@ -14,6 +14,11 @@ pipeline{
 			}
 		}
 		stage('UnitTest'){
+			when{
+				expression{
+					params.executeTests == true
+				}
+			}
 			steps{
 				script{
 					echo "Run the Unit Test case. thank you."
