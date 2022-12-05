@@ -26,6 +26,11 @@ pipeline{
 			}
 		}
 		stage('Package'){
+			when{
+				expression{
+					BRANCH_NAME == 'master'
+				}
+			}
 			steps{
 				script{
 					echo "Package the code"
