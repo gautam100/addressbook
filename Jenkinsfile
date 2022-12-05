@@ -16,7 +16,7 @@ pipeline{
 		stage('UnitTest'){
 			input{
 				message "Select the version to continue:"
-				OK "Version Selected"
+				ok "Version Selected"
 				parameters{
 					choice(name:'Version', choices:['1','2','3'])
 				}
