@@ -14,6 +14,13 @@ pipeline{
 			}
 		}
 		stage('UnitTest'){
+			input{
+				message "Select the version to continue:"
+				OK "Version Selected"
+				parameters{
+					choice(name:'Version', choices:['1','2','3'])
+				}
+			}
 			when{
 				expression{
 					params.executeTests == true
