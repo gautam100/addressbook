@@ -12,4 +12,3 @@ echo "Repo is not there"
 git clone https://github.com/gautam100/addressbook.git
 cd /home/ec2-user/addressbook
 fi
-sh 'mvn package'
